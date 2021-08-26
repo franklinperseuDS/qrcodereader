@@ -10,47 +10,49 @@
 
       <label> error ??</label>
      
-    <script>
-        let scanner = new Instascan.Scanner(
-            {
-                video: document.getElementById('preview')
-            }
-        );
-        scanner.addListener('scan', function(content) {
-            var codigoItemHonda = content.slice(1,26);
-            var quantidade = content.slice(26,39);
-            var unidadeMedida = content.slice(39,41);
-            var validade = content.slice(41,50);
-            var pedido = content.slice(50,59);
-            var tipo = content.slice(59,61);
-            var linha = content.slice(61,67);
-            var notaFiscal = content.slice(67,80);
-            var dataFabricacao = content.slice(80,90);
-            var naoSei = content.slice(90,103);
-            var nEtiqueta = content.slice(103, content.length+1);
-            alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
-                +' quantidade '+quantidade+'\n'
-                +' Unidade de medida ' + unidadeMedida + '\n'
-                + ' validade ' + validade +'\n'
-                + 'Pedido '+ pedido+ '\n'
-                + 'Tipo '+ tipo + '\n'
-                + 'Linha ' + linha+ '\n' 
-                + 'Nota Fiscal '+ notaFiscal + '\n'
-                + 'Data de Fabricação' + dataFabricacao + '\n'
-                + 'Códigos continuos '+ naoSei + '\n'
-                + 'Numero da Etiqueta '+ nEtiqueta);
-       
-             window.open(content, "_blank");
-        });
-        Instascan.Camera.getCameras().then(cameras => 
-        {
-            if(cameras.length > 0){
-                scanner.start(cameras[0]);
-            } else {
-                console.error("Não existe câmera no dispositivo!");
-            }
-        });
-    </script>
+    
 
  </body>
 </html>
+
+<script>
+    let scanner = new Instascan.Scanner(
+        {
+            video: document.getElementById('preview')
+        }
+    );
+    scanner.addListener('scan', function(content) {
+        var codigoItemHonda = content.slice(1,26);
+        var quantidade = content.slice(26,39);
+        var unidadeMedida = content.slice(39,41);
+        var validade = content.slice(41,50);
+        var pedido = content.slice(50,59);
+        var tipo = content.slice(59,61);
+        var linha = content.slice(61,67);
+        var notaFiscal = content.slice(67,80);
+        var dataFabricacao = content.slice(80,90);
+        var naoSei = content.slice(90,103);
+        var nEtiqueta = content.slice(103, content.length+1);
+        alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
+            +' quantidade '+quantidade+'\n'
+            +' Unidade de medida ' + unidadeMedida + '\n'
+            + ' validade ' + validade +'\n'
+            + 'Pedido '+ pedido+ '\n'
+            + 'Tipo '+ tipo + '\n'
+            + 'Linha ' + linha+ '\n' 
+            + 'Nota Fiscal '+ notaFiscal + '\n'
+            + 'Data de Fabricação' + dataFabricacao + '\n'
+            + 'Códigos continuos '+ naoSei + '\n'
+            + 'Numero da Etiqueta '+ nEtiqueta);
+   
+         window.open(content, "_blank");
+    });
+    Instascan.Camera.getCameras().then(cameras => 
+    {
+        if(cameras.length > 0){
+            scanner.start(cameras[0]);
+        } else {
+            console.error("Não existe câmera no dispositivo!");
+        }
+    });
+</script>
