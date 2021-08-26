@@ -19,11 +19,11 @@
         scanner.addListener('scan', function(content) {
             if( content.length < 9){
                 alert('O posto é: ' + content);
-            }
+            }else{
             // alert('Escaneou o conteudo: ' + content);
             let resposta = document.getElementById('resposta');
             resposta.innerHTML = content;
-
+            }
             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
