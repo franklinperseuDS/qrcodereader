@@ -29,7 +29,7 @@
             var naoSei = content.slice(91,104);
             var nEtiqueta = content.slice(104, content.length+1);
             // alert('Escaneou o conteudo ???: ' + codigoItemHonda);
-           document.getElementById("codigoItemHonda").innerText = codigoItemHonda;
+           document.getElementById("codigoItemHonda").innerHTML = codigoItemHonda;
             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
