@@ -42,9 +42,9 @@
         <tr>
         <td><strong> Unidade de Medida </strong> </td><td>  <p id="unidadeMedida"></p> </td>
         </tr>
-        <tr>
+        <!-- <tr>
         <td><strong> Validade </strong> </td> <td> <p id="validade"></p> </td>
-        </tr>
+        </tr> -->
         <tr>
             <td><strong> Pedido </strong> </td>
             <td> <p id="pedido"></p> </td>
@@ -116,7 +116,8 @@
         document.getElementById('codigoItemHonda').innerHTML = codigoItemHonda;
         document.getElementById('quantidade').innerHTML = quantidade;
         document.getElementById('unidadeMedida').innerHTML = unidadeMedida;
-        document.getElementById('validade').innerHTML = validade;
+        document.getElementById('pedido').innerHTML = pedido;
+        // document.getElementById('validade').innerHTML = validade;
         document.getElementById('tipo').innerHTML = tipo;
         document.getElementById('linha').innerHTML = linha;
         document.getElementById('notaFiscal').innerHTML = notaFiscal;
@@ -154,8 +155,8 @@
 
         var qrcode = new QRCode("qrcode", {
             text: userInput,
-            width: 64,
-            height: 64,
+            width: 128,
+            height: 128,
             colorDark: "black",
             colorLight: "white",
             correctLevel : QRCode.CorrectLevel.H
