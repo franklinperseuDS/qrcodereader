@@ -6,9 +6,9 @@
   </head>
   <body>
       <div> <lbel>Teste de Qr Code </label></div>
-    <video id="preview"></video>
+        <video id="preview"></video>
 
-    <div><label> <input type="text" id="codigoItemHonda" > </label></div>
+    
      
     <script>
         let scanner = new Instascan.Scanner(
@@ -39,7 +39,7 @@
                 + 'Data de Fabricação' + dataFabricacao + '\n'
                 + 'Códigos continuos '+ naoSei + '\n'
                 + 'Numero da Etiqueta '+ nEtiqueta);
-        //    document.getElementById("codigoItemHonda").innerHTML = codigoItemHonda;
+       
              window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
