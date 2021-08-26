@@ -98,17 +98,17 @@
         var dataFabricacao = content.slice(78,86);
         var estoque = content.slice(86,99);
         var nEtiqueta = content.slice(99, content.length+1);
-        alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
-            +' quantidade '+quantidade+'\n'
-            +' Unidade de medida ' + unidadeMedida + '\n'
-            + ' validade ' + validade +'\n'
-            + 'Pedido '+ pedido+ '\n'
-            + 'Tipo '+ tipo + '\n'
-            + 'Linha ' + linha+ '\n' 
-            + 'Nota Fiscal '+ notaFiscal + '\n'
-            + 'Data de Fabricação' + dataFabricacao + '\n'
-            + 'Posição de Estoque '+ estoque + '\n'
-            + 'Numero da Etiqueta '+ nEtiqueta);
+        // alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
+        //     +' quantidade '+quantidade+'\n'
+        //     +' Unidade de medida ' + unidadeMedida + '\n'
+        //     + ' validade ' + validade +'\n'
+        //     + 'Pedido '+ pedido+ '\n'
+        //     + 'Tipo '+ tipo + '\n'
+        //     + 'Linha ' + linha+ '\n' 
+        //     + 'Nota Fiscal '+ notaFiscal + '\n'
+        //     + 'Data de Fabricação' + dataFabricacao + '\n'
+        //     + 'Posição de Estoque '+ estoque + '\n'
+        //     + 'Numero da Etiqueta '+ nEtiqueta);
             createQrCode(content);
         //  window.open(content, "_blank");
         document.getElementById('informacoes').style.display = 'block';
