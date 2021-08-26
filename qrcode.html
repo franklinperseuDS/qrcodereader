@@ -17,17 +17,17 @@
             }
         );
         scanner.addListener('scan', function(content) {
-            var codigoItemHonda = content.slice(1,27);
-            var quantidade = content.slice(27,40);
-            var unidadeMedida = content.slice(40,42);
-            var validade = content.slice(42,51);
-            var pedido = content.slice(51,60);
-            var tipo = content.slice(60,62);
-            var linha = content.slice(62,68);
-            var notaFiscal = content.slice(68,81);
-            var dataFabricacao = content.slice(81,91);
-            var naoSei = content.slice(91,104);
-            var nEtiqueta = content.slice(104, content.length+1);
+            var codigoItemHonda = content.slice(1,26);
+            var quantidade = content.slice(26,39);
+            var unidadeMedida = content.slice(39,41);
+            var validade = content.slice(41,50);
+            var pedido = content.slice(50,59);
+            var tipo = content.slice(59,61);
+            var linha = content.slice(61,67);
+            var notaFiscal = content.slice(67,80);
+            var dataFabricacao = content.slice(80,90);
+            var naoSei = content.slice(90,103);
+            var nEtiqueta = content.slice(103, content.length+1);
             alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
                 +' quantidade '+quantidade+'\n'
                 +' Unidade de medida ' + unidadeMedida + '\n'
