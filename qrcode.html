@@ -9,6 +9,8 @@
         <video id="preview"></video>
 
       <label> </label>
+
+      <div id="qrcode"></div>
      
     
 
@@ -31,7 +33,7 @@
         var linha = content.slice(59,65);
         var notaFiscal = content.slice(65,78);
         var dataFabricacao = content.slice(78,86);
-        var naoSei = content.slice(86,99);
+        var estoque = content.slice(86,99);
         var nEtiqueta = content.slice(99, content.length+1);
         alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
             +' quantidade '+quantidade+'\n'
@@ -42,19 +44,14 @@
             + 'Linha ' + linha+ '\n' 
             + 'Nota Fiscal '+ notaFiscal + '\n'
             + 'Data de Fabricação' + dataFabricacao + '\n'
-            + 'Posição de Estoque '+ naoSei + '\n'
+            + 'Posição de Estoque '+ estoque + '\n'
             + 'Numero da Etiqueta '+ nEtiqueta);
-   
+            createQrCode(content);
         //  window.open(content, "_blank");
     });
     Instascan.Camera.getCameras().then(cameras => 
     {
         let selectedCamera;
-        // if(cameras.length > 0){
-        //     scanner.start(cameras[0]);
-        // } else {
-        //     console.error("Não existe câmera no dispositivo!");
-        // }
         if (cameras.length > 0) {
            for (let c = 0; c < cameras.length; c++) {
               if (cameras[c].name.indexOf('back') != -1) {
@@ -72,4 +69,18 @@
          }
     
     });
+
+    function createQrCode(userInput)
+    {
+        var userInput = document.getElementById('valor').value;
+
+        var qrcode = new QRCode("qrcode", {
+            text: userInput,
+            width: 256,
+            height: 256,
+            colorDark: "black",
+            colorLight: "white",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    }
 </script>
