@@ -33,41 +33,42 @@
              </thead>
              <tbody>
                  <tr>
-                <td></td><strong> codigo Item Honda </strong> </td><td></td> <input type='text' id="codigoItemHonda" readonly> </td>
+                     <!-- <p id="demo"></p> -->
+                <td><strong> codigo Item Honda </strong> </td><td> <p id="codigoItemHonda"> </p> </td>
         </tr>
         <tr>
-        <td><strong> Quantidade </strong> </td><td> <input type="text" id="quantidade" readonly> </td>
+        <td><strong> Quantidade </strong> </td><td> <p id="quantidade"> </p> </td>
         </tr>
         <tr>
-        <td>><strong> Unidade de Medida </strong> </td><td>  <input type="text" id="unidadeMedida" readonly> </td>
+        <td>><strong> Unidade de Medida </strong> </td><td>  <p id="unidadeMedida"></p> </td>
         </tr>
         <tr>
-        <td><strong> Validade </strong> </td> <td> <input type="text" id="validade" readonly> </td>
+        <td><strong> Validade </strong> </td> <td> <p id="validade"></p> </td>
         </tr>
         <tr>
             <td><strong> Pedido </strong> </td>
-            <td> <input type="text" id="pedido" readonly> </td>
+            <td> <p id="pedido"></p> </td>
         </tr>
         <tr>
-            <td><strong> Tipo </strong>  </td><td> <input type="text" id="tipo" readonly> </td>
+            <td><strong> Tipo </strong>  </td><td> <p id="tipo"></p> </td>
         </tr>
         <tr>
-        <td><strong> Linha </strong> </td> <td> <input type="text" id="linha" readonly> </td>
+        <td><strong> Linha </strong> </td> <td> <p id="linha"></p> </td>
         </tr>
         <tr>
-        <td><strong> Nota Fiscal </strong> </td> <td> <input type="text" id="notaFiscal" readonly> </td>
+        <td><strong> Nota Fiscal </strong> </td> <td> <p id="notaFiscal"></p> </td>
     </tr>
     <tr>
         <td><strong> Data de Fabricacao </strong>  </td>
-        <td><input type="text" id="dataFabricacao" readonly> </td>
+        <td><p id="dataFabricacao"></p> </td>
     </tr>
     <tr>
         <td><strong> Posição de Estoque </strong> </td>
-        <td><input type="text" id="estoque" readonly> </td>
+        <td><p id="estoque"></p> </td>
     </tr>
     <tr>
         <td><strong> Número de Etiqueta </strong> </td> 
-        <td><input type="text" id="nEtiqueta" readonly>  </td>
+        <td><p id="nEtiqueta"></p>  </td>
     </tr>
     </tbody>
         </table>
@@ -111,16 +112,17 @@
             createQrCode(content);
         //  window.open(content, "_blank");
         document.getElementById('informacoes').style.display = 'block';
-        document.getElementById('codigoItemHonda').innerText = codigoItemHonda;
-        document.getElementById('quantidade').innerText = codigoItemHonda;
-        document.getElementById('unidadeMedida').innerText = codigoItemHonda;
-        document.getElementById('validade').innerText = codigoItemHonda;
-        document.getElementById('tipo').innerText = codigoItemHonda;
-        document.getElementById('linha').innerText = codigoItemHonda;
-        document.getElementById('notaFiscal').innerText = codigoItemHonda;
-        document.getElementById('dataFabricacao').innerText = codigoItemHonda;
-        document.getElementById('estoque').innerText = codigoItemHonda;
-        document.getElementById('nEtiqueta').innerText = codigoItemHonda;
+        // document.getElementById("demo").innerHTML = "My First JavaScript"; exemplo
+        document.getElementById('codigoItemHonda').innerHTML = codigoItemHonda;
+        document.getElementById('quantidade').innerHTML = codigoItemHonda;
+        document.getElementById('unidadeMedida').innerHTML = codigoItemHonda;
+        document.getElementById('validade').innerHTML = codigoItemHonda;
+        document.getElementById('tipo').innerHTML = codigoItemHonda;
+        document.getElementById('linha').innerHTML = codigoItemHonda;
+        document.getElementById('notaFiscal').innerHTML = codigoItemHonda;
+        document.getElementById('dataFabricacao').innerHTML = codigoItemHonda;
+        document.getElementById('estoque').innerHTML = codigoItemHonda;
+        document.getElementById('nEtiqueta').innerHTML = codigoItemHonda;
        
 
         document.getElementById('preview').style.display = 'none';
