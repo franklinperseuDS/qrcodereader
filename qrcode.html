@@ -25,13 +25,13 @@
         var codigoItemHonda = content.slice(1,26);
         var quantidade = content.slice(26,39);
         var unidadeMedida = content.slice(39,41);
-        var validade = content.slice(41,50);
-        var pedido = content.slice(50,59);
-        var tipo = content.slice(59,61);
-        var linha = content.slice(61,67);
-        var notaFiscal = content.slice(67,80);
-        var dataFabricacao = content.slice(80,90);
-        var naoSei = content.slice(90,103);
+        var validade = content.slice(41,49);
+        var pedido = content.slice(49,58);
+        var tipo = content.slice(58,60);
+        var linha = content.slice(60,66);
+        var notaFiscal = content.slice(66,79);
+        var dataFabricacao = content.slice(79,89);
+        var naoSei = content.slice(89,102);
         var nEtiqueta = content.slice(103, content.length+1);
         alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
             +' quantidade '+quantidade+'\n'
@@ -42,7 +42,7 @@
             + 'Linha ' + linha+ '\n' 
             + 'Nota Fiscal '+ notaFiscal + '\n'
             + 'Data de Fabricação' + dataFabricacao + '\n'
-            + 'Códigos continuos '+ naoSei + '\n'
+            + 'Posição de Estoque '+ naoSei + '\n'
             + 'Numero da Etiqueta '+ nEtiqueta);
    
          window.open(content, "_blank");
