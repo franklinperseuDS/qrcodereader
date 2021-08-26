@@ -40,7 +40,7 @@
         <td><strong> Quantidade </strong> </td><td> <p id="quantidade"> </p> </td>
         </tr>
         <tr>
-        <td>><strong> Unidade de Medida </strong> </td><td>  <p id="unidadeMedida"></p> </td>
+        <td><strong> Unidade de Medida </strong> </td><td>  <p id="unidadeMedida"></p> </td>
         </tr>
         <tr>
         <td><strong> Validade </strong> </td> <td> <p id="validade"></p> </td>
@@ -114,15 +114,15 @@
         document.getElementById('informacoes').style.display = 'block';
         // document.getElementById("demo").innerHTML = "My First JavaScript"; exemplo
         document.getElementById('codigoItemHonda').innerHTML = codigoItemHonda;
-        document.getElementById('quantidade').innerHTML = codigoItemHonda;
-        document.getElementById('unidadeMedida').innerHTML = codigoItemHonda;
-        document.getElementById('validade').innerHTML = codigoItemHonda;
-        document.getElementById('tipo').innerHTML = codigoItemHonda;
-        document.getElementById('linha').innerHTML = codigoItemHonda;
-        document.getElementById('notaFiscal').innerHTML = codigoItemHonda;
-        document.getElementById('dataFabricacao').innerHTML = codigoItemHonda;
-        document.getElementById('estoque').innerHTML = codigoItemHonda;
-        document.getElementById('nEtiqueta').innerHTML = codigoItemHonda;
+        document.getElementById('quantidade').innerHTML = quantidade;
+        document.getElementById('unidadeMedida').innerHTML = unidadeMedida;
+        document.getElementById('validade').innerHTML = validade;
+        document.getElementById('tipo').innerHTML = tipo;
+        document.getElementById('linha').innerHTML = linha;
+        document.getElementById('notaFiscal').innerHTML = notaFiscal;
+        document.getElementById('dataFabricacao').innerHTML = dataFabricacao;
+        document.getElementById('estoque').innerHTML = estoque;
+        document.getElementById('nEtiqueta').innerHTML = nEtiqueta;
        
 
         document.getElementById('preview').style.display = 'none';
@@ -154,8 +154,8 @@
 
         var qrcode = new QRCode("qrcode", {
             text: userInput,
-            width: 256,
-            height: 256,
+            width: 64,
+            height: 64,
             colorDark: "black",
             colorLight: "white",
             correctLevel : QRCode.CorrectLevel.H
@@ -164,6 +164,9 @@
 
 
     function LimparTela(){
-
+        document.getElementById('informacoes').style.display = 'none';
+        document.getElementById('preview').style.display = 'block';
+        document.getElementById('qrcode').style.display = 'none';
+        document.getElementById('qrcode').innerHTML = '';
     }
 </script>
