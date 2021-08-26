@@ -5,7 +5,7 @@
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" ></script>	
   </head>
   <body>
-      <div> <lbel>Teste de Qr Code </lbel></div>
+      <div> <lbel>Teste de Qr Code </label></div>
     <video id="preview"></video>
 
     <div><label> <input type="text" id="codigoItemHonda" > </label></div>
@@ -28,9 +28,19 @@
             var dataFabricacao = content.slice(81,91);
             var naoSei = content.slice(91,104);
             var nEtiqueta = content.slice(104, content.length+1);
-            // alert('Escaneou o conteudo ???: ' + codigoItemHonda);
-           document.getElementById("codigoItemHonda").innerHTML = codigoItemHonda;
-            window.open(content, "_blank");
+            alert('Codigo do Item Honda ' + codigoItemHonda+ '\n' 
+                +' quantidade '+quantidade+'\n'
+                +' Unidade de medida ' + unidadeMedida + '\n'
+                + ' validade ' + validade +'\n'
+                + 'Pedido '+ pedido+ '\n'
+                + 'Tipo '+ tipo + '\n'
+                + 'Linha ' + linha+ '\n' 
+                + 'Nota Fiscal '+ notaFiscal + '\n'
+                + 'Data de Fabricação' + dataFabricacao + '\n'
+                + 'Códigos continuos '+ naoSei + '\n'
+                + 'Numero da Etiqueta '+ nEtiqueta);
+        //    document.getElementById("codigoItemHonda").innerHTML = codigoItemHonda;
+             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
