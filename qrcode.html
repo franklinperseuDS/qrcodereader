@@ -45,12 +45,12 @@
             + 'Posição de Estoque '+ naoSei + '\n'
             + 'Numero da Etiqueta '+ nEtiqueta);
    
-         window.open(content, "_blank");
+        //  window.open(content, "_blank");
     });
     Instascan.Camera.getCameras().then(cameras => 
     {
         if(cameras.length > 0){
-            scanner.start(cameras[0]);
+            scanner.start(cameras[1]);
         } else {
             console.error("Não existe câmera no dispositivo!");
         }
