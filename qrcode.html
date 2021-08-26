@@ -6,6 +6,10 @@
   </head>
   <body>
     <video id="preview"></video>
+    <div id="resposta">
+
+    </div>
+
     <script>
         let scanner = new Instascan.Scanner(
             {
@@ -14,6 +18,9 @@
         );
         scanner.addListener('scan', function(content) {
             alert('Escaneou o conteudo: ' + content);
+            let resposta = document.getElementById('resposta');
+            resposta.innerHTML = content;
+
             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
