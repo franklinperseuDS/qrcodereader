@@ -5,6 +5,7 @@
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" ></script>	
   </head>
   <body>
+      <div> <lbel>Teste de Qr Code </lbel></div>
     <video id="preview"></video>
     <script>
         let scanner = new Instascan.Scanner(
@@ -13,7 +14,7 @@
             }
         );
         scanner.addListener('scan', function(content) {
-            alert('Escaneou o conteudo: ' + content);
+            alert('Escaneou o conteudo : ' + content);
             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
