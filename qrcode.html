@@ -1,3 +1,8 @@
+<style>
+#informacoes{
+    display: none;
+}
+</style>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,20 +19,59 @@
 
       <div id="qrcode"></div>
      
-     <div id="informações">
-        <strong> codigo Item Honda </strong> <input type='text' id="codigoItemHonda" readonly> <br>
-        <strong> Quantidade </strong> <input type="text" id="quantidade" readonly> <br>
-        <strong> Unidade de Medida </strong>  <input type="text" id="unidadeMedida" readonly> <br>
-        <strong> Validade </strong> <input type="text" id="validade" readonly> <br>
-        <strong> Pedido </strong> <input type="text" id="pedido" readonly> <br>
-        <strong> Tipo </strong> <input type="text" id="tipo" readonly> <br>
-        <strong> Linha </strong> <input type="text" id="linha" readonly> <br>
-        <strong> Nota Fiscal </strong> <input type="text" id="notaFiscal" readonly> <br>
-        <strong> Data de Fabricacao </strong> <input type="text" id="dataFabricacao" readonly> <br>
-        <strong> Posição de Estoque </strong> <input type="text" id="estoque" readonly> <br>
-        <strong> Número de Etiqueta </strong> <input type="text" id="nEtiqueta" readonly> <br>
-
-        <button type="button" > Voltar</button>
+     <div id="informacoes">
+         <table>
+             <thead>
+                 <tr>
+                     <th>
+                        <strong>Campos: </strong>
+                     </th>
+                     <th>
+                        <strong>Valores </strong>
+                     </th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                <td></td><strong> codigo Item Honda </strong> </td><td></td> <input type='text' id="codigoItemHonda" readonly> </td>
+        </tr>
+        <tr>
+        <td><strong> Quantidade </strong> </td><td> <input type="text" id="quantidade" readonly> </td>
+        </tr>
+        <tr>
+        <td>><strong> Unidade de Medida </strong> </td><td>  <input type="text" id="unidadeMedida" readonly> </td>
+        </tr>
+        <tr>
+        <td><strong> Validade </strong> </td> <td> <input type="text" id="validade" readonly> </td>
+        </tr>
+        <tr>
+            <td><strong> Pedido </strong> </td>
+            <td> <input type="text" id="pedido" readonly> </td>
+        </tr>
+        <tr>
+            <td><strong> Tipo </strong>  </td><td> <input type="text" id="tipo" readonly> </td>
+        </tr>
+        <tr>
+        <td><strong> Linha </strong> </td> <td> <input type="text" id="linha" readonly> </td>
+        </tr>
+        <tr>
+        <td><strong> Nota Fiscal </strong> </td> <td> <input type="text" id="notaFiscal" readonly> </td>
+    </tr>
+    <tr>
+        <td><strong> Data de Fabricacao </strong>  </td>
+        <td><input type="text" id="dataFabricacao" readonly> </td>
+    </tr>
+    <tr>
+        <td><strong> Posição de Estoque </strong> </td>
+        <td><input type="text" id="estoque" readonly> </td>
+    </tr>
+    <tr>
+        <td><strong> Número de Etiqueta </strong> </td> 
+        <td><input type="text" id="nEtiqueta" readonly>  </td>
+    </tr>
+    </tbody>
+        </table>
+        <button type="button" onclick="LimparTela()"> Voltar</button>
      </div>
 
      
@@ -102,5 +146,10 @@
             colorLight: "white",
             correctLevel : QRCode.CorrectLevel.H
         });
+    }
+
+
+    function LimparTela(){
+
     }
 </script>
