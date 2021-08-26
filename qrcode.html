@@ -8,7 +8,7 @@
       <div> <lbel>Teste de Qr Code </label></div>
         <video id="preview"></video>
 
-      <label> error ??</label>
+      <label> </label>
      
     
 
@@ -49,6 +49,7 @@
     });
     Instascan.Camera.getCameras().then(cameras => 
     {
+        let selectedCamera;
         // if(cameras.length > 0){
         //     scanner.start(cameras[0]);
         // } else {
