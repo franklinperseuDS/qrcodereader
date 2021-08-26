@@ -8,7 +8,8 @@
       <div> <lbel>Teste de Qr Code </lbel></div>
     <video id="preview"></video>
 
-    <div><label> </label></div>
+    <div><label> <input type="text" id="codigoItemHonda" > </label></div>
+     
     <script>
         let scanner = new Instascan.Scanner(
             {
@@ -27,8 +28,8 @@
             var dataFabricacao = content.slice(81,91);
             var naoSei = content.slice(91,104);
             var nEtiqueta = content.slice(104, content.length+1);
-            alert('Escaneou o conteudo ???: ' + codigoItemHonda);
-           
+            // alert('Escaneou o conteudo ???: ' + codigoItemHonda);
+           document.getElementById("codigoItemHonda").innerText = codigoItemHonda;
             window.open(content, "_blank");
         });
         Instascan.Camera.getCameras().then(cameras => 
