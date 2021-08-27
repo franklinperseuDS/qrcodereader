@@ -1,5 +1,5 @@
 <?php
-$bd = new mysqli('147.2.10.24', 'root', 'm@llandr0', "codinjecao");
+$bd = new mysqli('localhost', 'root', 'pasword', "banco");
 if ($bd ->connect_error) {
     die('Não foi possível conectar: ' . $bd->connect_error);
 }
